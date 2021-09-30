@@ -117,6 +117,7 @@ impl DataSource {
                     base_url,
                     api_key,
                     serialization_format: eigenlog::SerializationFormat::Bincode,
+                    headers: None,
                 };
                 let client = reqwest::Client::new();
                 match cmd {

@@ -10,6 +10,7 @@ async fn main() -> anyhow::Result<()> {
         base_url: reqwest::Url::parse("http://127.0.0.1:8080/log")?,
         api_key: "123".to_string(),
         serialization_format: eigenlog::SerializationFormat::Bincode,
+        headers: None,
     };
     let host = "local"
         .parse::<eigenlog::Host>()

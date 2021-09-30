@@ -116,6 +116,7 @@ pub struct ApiConfig {
     pub base_url: reqwest::Url,
     pub api_key: String,
     pub serialization_format: SerializationFormat,
+    pub headers: Option<warp::http::HeaderMap>,
 }
 
 #[derive(serde::Serialize, serde::Deserialize, Clone, Debug)]

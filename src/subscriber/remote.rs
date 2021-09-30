@@ -73,6 +73,7 @@ async fn send_batch_err(
     );
     let client = reqwest::ClientBuilder::new()
         .default_headers(headers)
+        .default_headers(config.headers.unwrap_or_default())
         .build()
         .expect("Should succeed");
 
